@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>IPアドレスの取得</title>
+</head>
+<body>
+    
+	<p>IPアドレス <span id="ip"></span></p>
+	
+	<script>
+	
+	function getIPadress()
+	{
+		var id = document.getElementById("ip");
+		this.callback =function(data)
+		{
+			id.innerHTML = data["ip"];
+			console.log(data["ip"]);
+		}
+		
+	}
+	
+	getIPadress();
+	
+	</script>
+	<script src="http://jsonip.appspot.com/?callback=callback"></script>
+	
+	
+	
+</body>
+</html>
+
+
+
+
+
